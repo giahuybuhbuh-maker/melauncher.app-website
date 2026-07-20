@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ME Launcher — Launcher Minecraft tự viết</title>
+<meta name="description" content="ME Launcher: launcher Minecraft mã nguồn mở, đăng nhập Microsoft thật, hỗ trợ mod Fabric, tinh chỉnh hiệu năng sẵn.">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+<meta property="og:title" content="ME Launcher — Launcher Minecraft tự viết">
+<meta property="og:description" content="Đăng nhập Microsoft thật, hỗ trợ mod Fabric, tinh chỉnh hiệu năng sẵn.">
+<meta property="og:image" content="images/og-image.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="brand"><span class="blip"></span>ME_LAUNCHER</div>
+    <div class="nav-links">
+      <a href="#features">Tính năng</a>
+      <a href="#requirements">Yêu cầu</a>
+      <a href="#download">Tải xuống</a>
+      <a href="https://github.com/giahuybuhbuh-maker/ME-launcher-release" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://discord.gg/347kZE9v" target="_blank" rel="noopener">Discord</a>
+    </div>
+    <a class="nav-cta" href="#download">Tải xuống</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">ME Launcher minecraft made by Vietnamese</div>
+    <h1>Ghép launcher của riêng bạn,<br><span class="accent">từng khối một.</span></h1>
+    <p class="lede">
+      ME Launcher là launcher Minecraft mã nguồn mở: đăng nhập bằng tài khoản Microsoft
+      thật, tự quản lý phiên bản &amp; Java runtime, hỗ trợ mod Fabric, và tinh chỉnh sẵn
+      để chạy mượt hơn.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#download">⬇ Tải xuống cho Windows</a>
+      <a class="btn btn-ghost" href="https://github.com/giahuybuhbuh-maker/ME-launcher-release" target="_blank" rel="noopener">Xem mã nguồn</a>
+    </div>
+
+    <div class="craft" id="craftSection">
+      <div class="craft-grid" id="craftGrid"></div>
+      <div class="craft-arrow">→</div>
+      <div class="craft-output" id="craftOutput">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <div class="kicker">Tính năng</div>
+    <h2>Mọi phần một launcher thật cần có</h2>
+    <p class="section-lede">Không phải bản rút gọn — từ xác thực tài khoản đến quản lý mod, xây theo đúng cách các launcher lớn vẫn làm.</p>
+
+    <div class="feature-grid" data-reveal>
+      <div class="feature">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h3>Đăng nhập Microsoft thật</h3>
+        <p>Xác thực đúng chuẩn qua Xbox Live &amp; XSTS, tự kiểm tra quyền sở hữu Minecraft trước khi cho vào game.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a4 4 0 00-4 4v2H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2h-2V6a4 4 0 00-4-4z"/></svg>
+        <h3>Hỗ trợ mod Fabric</h3>
+        <p>Tick một ô, launcher tự tìm đúng bản Fabric Loader tương thích và ghép vào phiên bản bạn chọn.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v4H4zM4 10h10v4H4zM4 16h16v4H4z"/></svg>
+        <h3>Tự quản lý Java</h3>
+        <p>Không cần tự cài JDK cho từng phiên bản — launcher tự tải đúng bản Java runtime Minecraft yêu cầu.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        <h3>Tinh chỉnh hiệu năng</h3>
+        <p>Áp dụng sẵn bộ JVM flags tinh chỉnh bộ nhớ (kiểu Aikar's flags), giảm giật khi chơi lâu.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.3 1.9l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.9-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 01-4 0v-.1a1.7 1.7 0 00-1-1.6 1.7 1.7 0 00-1.9.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.9 1.7 1.7 0 00-1.5-1H3a2 2 0 010-4h.1a1.7 1.7 0 001.6-1 1.7 1.7 0 00-.3-1.9l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.9.3H9a1.7 1.7 0 001-1.5V3a2 2 0 014 0v.1a1.7 1.7 0 001 1.6 1.7 1.7 0 001.9-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.9V9a1.7 1.7 0 001.5 1H21a2 2 0 010 4h-.1a1.7 1.7 0 00-1.5 1z"/></svg>
+        <h3>Cài đặt đầy đủ</h3>
+        <p>Chỉnh RAM tối thiểu/tối đa, đường dẫn Java tuỳ chỉnh, bật/tắt giao diện tối — ngay trong launcher.</p>
+      </div>
+      <div class="feature">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 11-6.2-8.6"/><path d="M12 7v5l3 3"/></svg>
+        <h3>Kiểm tra file thông minh</h3>
+        <p>Chỉ tải lại đúng phần còn thiếu — không tải lại từ đầu mỗi lần mở launcher.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="requirements">
+  <div class="wrap">
+    <div class="kicker">Yêu cầu hệ thống</div>
+    <h2>Chạy được là chạy ngay</h2>
+    <table class="req-table" data-reveal>
+      <tr><td>Hệ điều hành</td><td>Windows 10 trở lên (64-bit)</td></tr>
+      <tr><td>Kết nối mạng</td><td>Cần cho lần chạy đầu (tải JDK, JavaFX) và lúc tải phiên bản Minecraft</td></tr>
+      <tr><td>Dung lượng trống</td><td>~1 GB cho bản thân launcher, chưa tính file game tải về sau</td></tr>
+      <tr><td>Tài khoản</td><td>Tài khoản Microsoft đã sở hữu Minecraft: Java Edition</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="download">
+  <div class="wrap">
+    <div class="kicker">Tải xuống</div>
+    <h2>Sẵn sàng chưa?</h2>
+    <p class="section-lede">Bản portable, không cần cài đặt — giải nén và chạy.</p>
+
+    <div class="download-card" data-reveal>
+      <div>
+        <span class="version-tag">v1.0.0</span>
+        <h3>ME Launcher cho Windows</h3>
+        <p>File nén <strong>.zip</strong>, đi kèm sẵn Java runtime bên trong — giải nén ra là chạy được <code>ME Launcher.exe</code>, không cần cài Java riêng.</p>
+        <div class="note">
+          <strong>Cách cài:</strong> tải về → giải nén → mở thư mục vừa giải nén →
+          chuột phải vào <code>ME Launcher.exe</code> → <strong>Send to → Desktop
+          (create shortcut)</strong>. Từ đó mở game ngay từ Desktop, không cần vào
+          lại thư mục này nữa.
+        </div>
+        <div class="note">
+          <strong>Lưu ý:</strong> nút bên dưới đang trỏ tạm thời (<code>#</code>).
+          Thay bằng link file thật sau khi bạn nén thư mục <code>build\dist\ME Launcher\</code>
+          thành <code>.zip</code> và tải lên nơi lưu trữ (khuyên dùng GitHub Releases —
+          miễn phí, có sẵn số liệu tải về).
+        </div>
+      </div>
+      <a class="btn btn-primary" href="#" id="downloadBtn">⬇ Tải ME-Launcher.zip</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <div class="brand">ME_LAUNCHER</div>
+    <div>Xây bằng Java 25 · JavaFX 25 · Không liên kết với Mojang hay Microsoft</div>
+    <div style="display:flex; gap:18px;">
+      <a href="https://github.com/giahuybuhbuh-maker/ME-launcher-release" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://discord.gg/347kZE9v" target="_blank" rel="noopener">Discord</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
