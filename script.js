@@ -41,7 +41,7 @@
   document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
 
   // Placeholder download button - nhac nguoi dung thay link that
-  document.getElementById('downloadBtn').addEventListener('click', (e) => {
-    e.preventDefault();
-    alert('Thay link tai that vao href cua nut nay (vd: link GitHub Releases) trong file index.html.');
-  });
+  //document.getElementById('downloadBtn').addEventListener('click', (e) => {
+  //  e.preventDefault();
+  //  alert('Thay link tai that vao href cua nut nay (vd: link GitHub Releases) trong file index.html.');
+  //});
